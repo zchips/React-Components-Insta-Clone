@@ -10,7 +10,13 @@ const Comment = props => {
       <span className='user'>{comment.username}</span>
       {' '}
       <span className='comment'>{comment.text}</span>
+    
+      {comment.map(comment => {
+      return <Comment comment = {comment} key={comment.id} />
+    })}
     </div>
+  
+    
   );
 };
 
